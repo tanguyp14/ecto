@@ -1,61 +1,41 @@
 .header {
-    z-index: 10;
-    position: fixed;
-    background-color: $white;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba($black, 16%) 0px 3px 6px;
-    height: 68px;
+    width: 100%;
+    height: fit-content;
+    position: relative;
 
-    &--menu-is-open {
-        nav {
-            .menu-toggle {
-                color: $white;
-                span::before,
-                span::after {
-                    background-color: $white;
-                }
-            }
-
-            .menu-menu-container {
-                right: 0;
-                ul{
-                    li{
-                        margin-bottom: 20px;
-                        a{
-                            color: $white;
-                        }
-                    }
-                }
-            }
-        }
+    &::before {
+        @include sticker('glob.webp');
+        width: 20vw;
+        left: 0;
+        bottom: 1vw;
     }
 
-    .container {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        padding: 0px;
-        z-index: 10;
+    &::after {
+        @include sticker('sunshine.webp');
+        width: 15vw;
+        bottom: 0;
+        left: 12vw;
+        transform: scaleX(-1);
+        animation: tic 5s infinite alternate ease-in-out;
+    }
+
+    h1 {
+        color: $beige;
+        overflow: hidden;
         position: relative;
+        height: 27vw;
+        margin: 0;
 
-        img {
-            max-width: 100%;
-            padding: 0px 15px;
-        }
-
-        @include breakpoints(md) {
-            padding: 0 5%;
-            justify-content: space-between;
-        }
-
-        .main-navigation {
+        &::after {
+            content: '';
+            background-image: url('./../img/logo.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
             display: flex;
-            justify-content: end;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
         }
     }
 }

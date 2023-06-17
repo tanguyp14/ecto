@@ -1,4 +1,5 @@
 // Font Family
+@import url("https://use.typekit.net/dwz2htr.css");
 @font-face {
     font-family: 'gulfs';
     src: url('../fonts/gulfsdisplay-normal-webfont.woff2') format('woff2'),
@@ -7,7 +8,7 @@
     font-style: normal;
 }
 $primary-font-family: "gulfs", sans-serif;
-$secondary-font-family: $primary-font-family;
+$secondary-font-family: "halogen", sans-serif;
 
 
 // Font Size

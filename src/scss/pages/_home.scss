@@ -1,0 +1,47 @@
+#page {
+    background-color: $beige;
+    padding: 10px 8px;
+    position: relative;
+    .roll-container{
+        rotate: -8deg;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        scale: 1.2;
+        position: absolute;
+        right: 4vw;
+        bottom: 6vw;
+        .roll {
+            grid-column: 1;
+            grid-row: 1;
+            display: flex;
+            align-items: center;
+            right: 0;
+            overflow: hidden;
+            font-family: $secondary-font-family;
+            width: 100px;
+            height: 30px;
+            font-size: 20pt;
+            color: white;
+    
+            span {
+                white-space: nowrap;
+                animation: defilement-rtl 10s infinite linear;
+                z-index: 2;
+            }
+    
+            &.back {
+                background-image: url('./../img/roll.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+                width: 160px;
+                height: 30px;
+                top: -2px;
+                position: relative;
+            }
+        }
+    }
+    
+}

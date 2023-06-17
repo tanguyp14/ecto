@@ -1,0 +1,16 @@
+@keyframes tic{
+    0%{
+        rotate: -15deg;
+    }
+    100%{
+        rotate: 15deg;
+    }
+}
+@keyframes defilement-rtl {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }

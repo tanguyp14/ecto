@@ -37,4 +37,9 @@
 		<header id="masthead" class="header" role="banner">
 			<h1>ECTO</h1>
 		</header><!-- #masthead -->
+		<div class="roll-container">
+		<div class="roll back"></div>
+		<div class="roll"><span> - bières - cocktails - saucissons</span><span> - bières - cocktails - saucissons</span></div>
+		</div>
+		
 		<main id="main-content" role="main">
