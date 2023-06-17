@@ -3,13 +3,13 @@
  * Register nav menus locations
  */
 
- if ( ! function_exists( 'fouetlocation_register_nav_menu' ) ) {
+ if ( ! function_exists( 'ectobar_register_nav_menu' ) ) {
 
-	function fouetlocation_register_nav_menu(){
+	function ectobar_register_nav_menu(){
 		register_nav_menus( array(
-	    	'primary_menu' => __( 'Primary Menu', 'fouetlocation' ),
-	    	'footer_menu'  => __( 'Footer Menu', 'fouetlocation' ),
+	    	'primary_menu' => __( 'Primary Menu', 'ectobar' ),
+	    	'footer_menu'  => __( 'Footer Menu', 'ectobar' ),
 		) );
 	}
-	add_action( 'after_setup_theme', 'fouetlocation_register_nav_menu', 0 );
+	add_action( 'after_setup_theme', 'ectobar_register_nav_menu', 0 );
 }

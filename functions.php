@@ -10,8 +10,8 @@ require_once 'inc-functions/ajax-filter-type.php';
 /**
  * Essential theme supports
  * */
-add_action('after_setup_theme', 'fouetlocation_theme_setup');
-function fouetlocation_theme_setup()
+add_action('after_setup_theme', 'ectobar_theme_setup');
+function ectobar_theme_setup()
 {
 	/** tag-title **/
 	add_theme_support('title-tag');
@@ -50,7 +50,7 @@ function fouetlocation_theme_setup()
 /**
  * Add custom logo for admin login screen and link to homepage
  */
-function fouetlocation_filter_login_head()
+function ectobar_filter_login_head()
 {
 
 	if (has_custom_logo()) {
@@ -68,13 +68,13 @@ function fouetlocation_filter_login_head()
 <?php
 	}
 }
-add_action('login_head', 'fouetlocation_filter_login_head', 100);
+add_action('login_head', 'ectobar_filter_login_head', 100);
 
-function fouetlocation_new_wp_login_url()
+function ectobar_new_wp_login_url()
 {
 	return home_url();
 }
-add_filter('login_headerurl', 'fouetlocation_new_wp_login_url');
+add_filter('login_headerurl', 'ectobar_new_wp_login_url');
 
 function format_value($value)
 {

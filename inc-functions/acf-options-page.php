@@ -8,8 +8,8 @@
  if( function_exists( 'acf_add_options_page' ) ) {
     
     acf_add_options_page(array(
-        'page_title'    => __( 'Réglages généraux', 'fouetlocation' ),
-        'menu_title'    => __( 'Réglages généraux', 'fouetlocation' ),
+        'page_title'    => __( 'Réglages généraux', 'ectobar' ),
+        'menu_title'    => __( 'Réglages généraux', 'ectobar' ),
         'menu_slug'     => 'theme-general-settings',
         'capability'    => 'edit_posts',
         'redirect'      => false

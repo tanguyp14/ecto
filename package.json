@@ -1,5 +1,5 @@
 {
-  "name": "fouet-location",
+  "name": "ecto-bar",
   "version": "1.0.0",
   "description": "Starter WP Theme",
   "main": "editor.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pixelea-fr/fouet-location.git"
+    "url": "git+https://github.com/pixelea-fr/ecto-bar.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pixelea-fr/fouet-location/issues"
+    "url": "https://github.com/pixelea-fr/ecto-bar/issues"
   },
-  "homepage": "https://github.com/pixelea-fr/fouet-location#readme",
+  "homepage": "https://github.com/pixelea-fr/ecto-bar#readme",
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@babel/preset-env": "^7.20.2",

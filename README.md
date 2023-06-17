@@ -7,16 +7,16 @@ Starter WP Theme
 ## Installation
 Dans le dossier `wp-content/themes` : 
 1. `git init`
-2. `git clone https://github.com/pixelea-fr/fouet-location.git`
+2. `git clone https://github.com/pixelea-fr/ecto-bar.git`
 3. `rm -rf .git`
-4. `cd fouet-location`
+4. `cd ecto-bar`
 5. `rm -rf .git`
 6. `npm install`
 
 Avant de poursuivre, réalisez ces tâches : 
 - Renommer le dossier du thème avec un nom correspondant au projet
-- Effectuer un rechercher/remplacer sur 'fouetlocation' et le remplacer avec un slug correspondant au projet
-- Effectuer un rechercher/remplacer sur 'fouet-location' et le remplacer avec un nom correspondant au projet
+- Effectuer un rechercher/remplacer sur 'ectobar' et le remplacer avec un slug correspondant au projet
+- Effectuer un rechercher/remplacer sur 'ecto-bar' et le remplacer avec un nom correspondant au projet
 
 ## Créer un dépôt Git pour accueillir le thème
 Créer un repo Git __vide sans README__ 

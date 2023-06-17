@@ -25,7 +25,7 @@
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
-		<a class="skip-link screen-reader-text sr-only" href="#main-content"><?php esc_html_e('Aller au contenu', 'fouetlocation'); ?></a>
+		<a class="skip-link screen-reader-text sr-only" href="#main-content"><?php esc_html_e('Aller au contenu', 'ectobar'); ?></a>
 
 		<header id="masthead" class="header" role="banner">
 			<div class="container">
