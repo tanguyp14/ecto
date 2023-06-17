@@ -35,16 +35,6 @@
 		<a class="skip-link screen-reader-text sr-only" href="#main-content"><?php esc_html_e('Aller au contenu', 'ectobar'); ?></a>
 
 		<header id="masthead" class="header" role="banner">
-			<div class="container">
-				<div class="site-branding">
-					<?php the_custom_logo() ?>
-				</div><!-- .site-branding -->
-
-				<?php get_template_part('template-parts/navigation/primary'); ?>
-
+			<h1>ECTO</h1>
 		</header><!-- #masthead -->
-		<?php $struct = get_field('background-site', 'option');
-		extract($struct); ?>
 		<main id="main-content" role="main">
-			<img class="background-site" src="<?php echo $background_image['url'] ?>">
-			<div class="sections_wrapper">
