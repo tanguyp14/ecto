@@ -1,0 +1,32 @@
+.sections_wrapper:has(.contact_block_solo) {
+    display: flex;
+    .entry-content {
+        margin: auto;
+
+        p {
+            max-width: 700px;
+            margin: auto;
+
+            &.has-text-align-center {
+                text-align: center;
+            }
+        }
+        .wp-block-columns{
+            justify-content: space-between;
+            margin: 20px 0;
+            div{
+                h3,p{
+                    text-align: left;
+                }
+                h3{
+                    margin: 10px 0;
+                }
+                &:last-of-type{
+                    h3,p{
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}

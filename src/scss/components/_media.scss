@@ -1,0 +1,46 @@
+.composant {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: auto;
+
+    .image {
+        position: relative;
+        border-radius: $border-radius;
+        overflow: hidden;
+        width: 100%;
+        aspect-ratio: 1/1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center center;
+            background: linear-gradient(180deg, rgba(93,108,101,1) 34%, rgba(171,160,168,1) 78%);
+            filter: saturate(120%) brightness(120%);
+        }
+
+        .blue_cap {
+            position: absolute;
+            background-color: $blue;
+            color: $white;
+            bottom: 0;
+            right: 0;
+            min-width: 60%;
+            text-align: center;
+            border-top-left-radius: $border-radius;
+            font-size: 11pt;
+            padding: 2px 0;
+        }
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        color: $blue;
+        justify-content: center;
+        align-items: center;
+    }
+}

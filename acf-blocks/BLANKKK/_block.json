@@ -1,0 +1,24 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "acf/BLANK",
+    "title": "BLANK",
+    "description": "BLANK",
+    "icon": "carrot",
+    "category": "pixelea",
+    "keywords": [
+        "ng1",
+        "block"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "view.php"
+    },
+    "script": ["BLANK"],
+    "style": "file:assets/css/style.css",
+    "supports": {
+        "align": true,
+        "html": false,
+        "multiple": false
+    }
+}
