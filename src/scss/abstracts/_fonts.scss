@@ -1,7 +1,14 @@
 // Font Family
-@import url("https://use.typekit.net/fgq5mmy.css");
-$primary-font-family: "Museo", sans-serif;
+@font-face {
+    font-family: 'gulfs_displaynormal';
+    src: url('../../fonts/gulfsdisplay-normal-webfont.woff2') format('woff2'),
+         url('../../fonts/gulfsdisplay-normal-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+$primary-font-family: "gulfs_displaynormal", sans-serif;
 $secondary-font-family: $primary-font-family;
+
 
 // Font Size
 $base-font-size: 16px;

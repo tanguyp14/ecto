@@ -5,7 +5,6 @@ require_once 'inc-functions/register-menus.php';
 require_once 'inc-functions/register-styles.php';
 require_once 'inc-functions/register-scripts.php';
 require_once 'inc-functions/acf-options-page.php';
-require_once 'inc-functions/ajax-filter-type.php';
 
 /**
  * Essential theme supports
