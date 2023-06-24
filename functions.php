@@ -87,21 +87,75 @@ function reformat_value($value)
 	return $formatted_value;
 }
 
-
-function include_card_with_id($id)
-{
-	get_template_part_custom('card/card.php', $id);
-}
-
-
-function get_template_part_custom($template_name, $id)
-{
-	ob_start();
-	$template_path = get_template_directory() . '/template-parts/' . $template_name;
-	if (file_exists($template_path)) {
-		include $template_path;
-	}
-	ob_end_flush();
-}
-
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+add_theme_support( 'editor-color-palette', array(
+	array(
+		'name' => __( 'Jaune', 'textdomain' ),
+		'slug' => 'jaune',
+		'color' => '#FAC840', 
+	),
+	array(
+		'name' => __( 'Bleu_Clair', 'textdomain' ),
+		'slug' => 'bleu-clair',
+		'color' => '#3e67ed', 
+	),
+	array(
+		'name' => __( 'Rose', 'textdomain' ),
+		'slug' => 'rose',
+		'color' => '#ff316f', 
+	),
+	array(
+		'name' => __( 'Vert', 'textdomain' ),
+		'slug' => 'vert',
+		'color' => '#9BDD50', 
+	),
+	array(
+		'name' => __( 'Blanc', 'textdomain' ),
+		'slug' => 'blanc',
+		'color' => '#fff', 
+	),
+	array(
+		'name' => __( 'Bleu', 'textdomain' ),
+		'slug' => 'bleu',
+		'color' => '#231c4d', 
+	),
+) );
+
+add_action('acf/input/admin_footer', 'prefix_acf_color_picker_from_theme_palette');
+function prefix_acf_color_picker_from_theme_palette() {
+
+    $colors = '';
+    // Get colors palette registerd in theme support
+	$color_palette = get_theme_support( 'editor-color-palette' );
+    if ( ! empty( $color_palette ) ) {
+		// Get each 'color' value (hex code)
+		$colors = array_column( $color_palette[ 0 ], 'color' );
+    }
+
+    // Try to get color palette from theme.json
+    if ( false === $color_palette && class_exists( 'WP_Theme_JSON_Resolver' ) ) {
+        $settings = WP_Theme_JSON_Resolver::get_theme_data()->get_settings();
+        if ( isset( $settings['color']['palette']['theme'] ) ) {
+            $color_palette = $settings['color']['palette']['theme'];
+            if ( ! empty( $color_palette ) ) {
+                // Get each 'color' value (hex code)
+                $colors = array_column( $color_palette, 'color' );
+            }
+        }
+    }
+
+    if ( ! empty( $colors ) ) {
+		?>
+		<script type="text/javascript">
+		acf.add_filter('color_picker_args', function( args, field ){
+		    // do something to args
+		    args.palettes = <?php echo json_encode( $colors ); ?>;
+		    // return
+		    return args;
+		});
+		</script>
+		<?php
+	}
+
+}

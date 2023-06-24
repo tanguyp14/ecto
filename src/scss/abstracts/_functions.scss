@@ -1,16 +1,61 @@
-@keyframes tic{
-    0%{
-        rotate: -15deg;
-    }
-    100%{
-        rotate: 15deg;
-    }
-}
-@keyframes defilement-rtl {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+@keyframes tic {
+  0% {
+    rotate: -15deg;
   }
+
+  100% {
+    rotate: 15deg;
+  }
+}
+
+@keyframes defilement-rtl {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes tic-scale {
+  0% {
+    rotate: -5deg;
+    scale: 1;
+  }
+
+  50% {
+
+    scale: 1.1;
+  }
+
+  100% {
+    rotate: 5deg;
+    scale: 1;
+  }
+}
+
+@keyframes beat-box {
+  0% {
+    scale: 1;
+  }
+
+  20% {
+    scale: 1.2;
+  }
+  40% {
+    scale: 1.1;
+  }
+  70% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+
+@mixin font-size($sizeaxd) {
+  $size: calc($sizeaxd * 0.75);
+  font-size: $size + pt;
+}

@@ -11,3 +11,25 @@
     position: absolute;
     z-index: 2;
 }
+
+@mixin sticker-block($name) {
+    content: '';
+    background-image: url('../../../../dist/img/' + $name);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform-origin: center center;
+    translate: -50% 50%;
+    display: flex;
+    aspect-ratio: 1/1;
+    position: absolute;
+    z-index: 2;
+}
+
+@mixin rounded($back, $in) {
+    color: $in;
+    background: $back;
+    font-family: $secondary-font-family;
+    border-radius: 100px;
+    padding: 5px 0px;
+}

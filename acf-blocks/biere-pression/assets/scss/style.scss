@@ -1,0 +1,157 @@
+@import '../../../../src/scss/abstracts/all.scss';
+
+// Call all variables 
+.biere-pression {
+    margin-top: 15vw;
+
+    .content {
+        display: grid;
+        grid-template-columns: 128px 30px 64px 5px 64px 5px 64px;
+        grid-template-rows: 20px auto;
+        align-items: end;
+        justify-content: center;
+        margin: auto;
+        &::before{
+            @include sticker-block('cloud.webp');
+            top: 45%;
+            right: -24%;
+            width: 110px;
+            rotate: 8deg;
+        }
+
+        span {
+            @include rounded($white, $jaune);
+            @include font-size(14);
+            padding: 0;
+            width: 100%;
+            line-height: 15pt;
+            height: fit-content;
+            text-align: center;
+            grid-column-start: 5;
+            grid-column-end: 6;
+
+            &:first-of-type {
+                color: $rose;
+                grid-column-start: 3;
+                grid-column-end: 4;
+            }
+
+            &:last-of-type {
+                color: $bleu-clair;
+                grid-column-start: 7;
+                grid-column-end: 8;
+            }
+        }
+
+
+        article {
+            grid-column-start: 1;
+            grid-column-end: 8;
+            margin-bottom: 5vw;
+            z-index: 5;
+            display: grid;
+            grid-template-rows: auto 1fr;
+            grid-template-columns: 128px 30px 64px 5px 64px 5px 64px;
+
+            .nom {
+                grid-column-start: 1;
+                grid-column-end: 8;
+                width: 100%;
+            }
+
+            &.biere_du_moment {
+                .nom {
+                    position: relative;
+                    z-index: 2;
+
+                    &::after {
+                        @include sticker-block('star.svg');
+                        width: 30px;
+                        left: -3px;
+                        top: -20px;
+                        rotate: 10deg;
+                        z-index: -1;
+                        animation: tic-scale 0.5s infinite ease-in-out alternate;
+                    }
+
+                    &::before {
+                        @include sticker-block('star.svg');
+                        width: 20px;
+                        left: 140px;
+                        bottom: 29%;
+                        rotate: -10deg;
+                        z-index: 1;
+                        animation: tic-scale 1.5s infinite ease-in-out alternate;
+                    }
+                }
+            }
+
+            &.embuscade {
+                .nom {
+                    position: relative;
+
+                    &::after {
+                        @include sticker-block('coeur.svg');
+                        width: 17px;
+                        left: 177px;
+                        top: -5px;
+                        rotate: 23deg;
+                        animation: beat-box 5s ease-in-out  infinite;
+
+                    }
+
+                    &::before {
+                        @include sticker-block('coeur.svg');
+                        width: 10px;
+                        top: -9px;
+                        left: 185px;
+                        rotate: 41deg;
+                        animation: beat-box 2s ease-in-out  infinite;
+                    }
+                }
+
+            }
+
+            .attributes {
+                max-width: 128px;
+                display: flex;
+                flex-wrap: wrap;
+                min-height: 30px;
+                gap: 0px;
+                flex-direction: row;
+                align-content: flex-start;
+
+                span {
+                    @include font-size(10);
+                    line-height: 7.5pt;
+                    height: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: fit-content;
+                    padding: 0px 5%;
+                    border: 1px solid;
+                    &.magic{
+                        background: linear-gradient(45deg, $rose 0%, $bleu-clair 50%, $jaune 100%);
+                    }
+                }
+            }
+        }
+
+        .prix {
+            grid-column-start: 3;
+            grid-column-end: 8;
+            font-family: $secondary-font-family;
+            gap: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            div {
+                min-width: 64px;
+                @include font-size(19);
+            }
+        }
+    }
+}

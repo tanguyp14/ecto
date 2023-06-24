@@ -1,10 +1,10 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
     "apiVersion": 2,
-    "name": "acf/big-slider",
-    "title": "Big Slider",
-    "description": "Big Slider",
-    "icon": "slides",
+    "name": "acf/biere-pression",
+    "title": "Biere Pression",
+    "description": "Liste des bières pression",
+    "icon": "beer",
     "category": "pixelea",
     "keywords": [
         "ng1",
@@ -14,7 +14,7 @@
         "mode": "preview",
         "renderTemplate": "view.php"
     },
-    "script": ["big-slider"],
+    "script": ["biere-pression"],
     "style": "file:assets/css/style.css",
     "supports": {
         "align": true,
