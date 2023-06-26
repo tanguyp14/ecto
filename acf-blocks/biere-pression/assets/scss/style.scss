@@ -11,10 +11,12 @@
         align-items: end;
         justify-content: center;
         margin: auto;
-        &::before{
+        position: relative;
+
+        &::before {
             @include sticker-block('cloud.webp');
-            top: 45%;
-            right: -24%;
+            top: 40%;
+            right: -100px;
             width: 110px;
             rotate: 8deg;
         }
@@ -22,7 +24,6 @@
         span {
             @include rounded($white, $jaune);
             @include font-size(14);
-            padding: 0;
             width: 100%;
             line-height: 15pt;
             height: fit-content;
@@ -42,7 +43,15 @@
                 grid-column-end: 8;
             }
         }
-        article{
+
+        article {
+            grid-column-end: 8;
+            grid-template-columns: 128px 30px 64px 5px 64px 5px 64px;
+
+            .nom {
+                grid-column-end: 8;
+            }
+
             &.biere_du_moment {
                 .nom {
                     position: relative;
@@ -80,7 +89,7 @@
                         left: 177px;
                         top: -5px;
                         rotate: 23deg;
-                        animation: beat-box 5s ease-in-out  infinite;
+                        animation: beat-box 5s ease-in-out infinite;
 
                     }
 
@@ -90,7 +99,7 @@
                         top: -9px;
                         left: 185px;
                         rotate: 41deg;
-                        animation: beat-box 2s ease-in-out  infinite;
+                        animation: beat-box 2s ease-in-out infinite;
                     }
                 }
 

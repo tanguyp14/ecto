@@ -1,0 +1,32 @@
+.back-top{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 70px;
+    background-color: $rose;
+    border-radius: 30px;
+    border: 2px solid $white;
+    z-index: 20;
+    transition: all 0.5s  cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before{
+        position: absolute;
+        content: '';
+        background-image: url('../../dist/img/top.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 30px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    &.hide{
+        bottom: -70px;
+    }
+}

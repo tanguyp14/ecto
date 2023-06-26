@@ -1,4 +1,4 @@
-<a href="#main-content" class="back-top hide" alt="Back to top" title="Retour en haut de page"></a>
+<a href="#masthead" class="back-top hide" alt="Back to top" title="Retour en haut de page"></a>
 		</main><!-- /#main-content -->
 
 		<footer role="contentinfo">

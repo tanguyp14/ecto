@@ -2,9 +2,9 @@
 
 	$('document').ready(function () {
 		// Burger nav
-		$('.menu-toggle').on('click', function () {
-			$('header').toggleClass('header--menu-is-open');
-		});
+		// $('.menu-toggle').on('click', function () {
+		// 	$('header').toggleClass('header--menu-is-open');
+		// });
 	});
 
 	$(window).scroll(function () {

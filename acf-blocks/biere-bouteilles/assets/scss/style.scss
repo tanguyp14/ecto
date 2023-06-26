@@ -1,0 +1,107 @@
+@import '../../../../src/scss/abstracts/all.scss';
+
+// Call all variables 
+.biere-bouteille {
+    margin-top: 15vw;
+
+    .locales {
+        margin-top: 15vw;
+        position: relative;
+        height: fit-content;
+
+        &::before {
+            @include sticker-block('locales.webp');
+            width: 300px;
+            top: -95%;
+            left: 53px;
+        }
+    }
+    .classique{
+        margin-top: 15vw;
+        position: relative;
+        height: fit-content;
+
+        &::before {
+            @include sticker-block('locales.webp');
+            width: 300px;
+            top: -95%;
+            left: 53px;
+        }
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 360px;
+        align-items: end;
+        justify-content: center;
+        margin: auto;
+
+        article {
+            grid-column-end: 5;
+            grid-template-columns: 128px 30px 64px 5px 133px;
+
+            .nom {
+                grid-column-end: 5;
+            }
+
+            span {
+                @include rounded($white, $bleu-clair);
+
+            }
+
+            $transforms: 5deg, -8deg, 12deg, -3deg;
+            $leftValues: 30px, 40px, 20px, 10px;
+
+            @each $transform in $transforms {
+                $index: index($transforms, $transform);
+                $left: nth($leftValues, $index);
+
+                &:nth-child(#{$index}) {
+                    .image {
+                        img {
+                            transform-origin: center;
+                            transform: rotate($transform);
+                            left: $left;
+                        }
+                    }
+                }
+            }
+
+            .image {
+                grid-column-start: 5;
+                grid-column-end: 6;
+                grid-row-start: 1;
+                grid-row-end: 3;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    max-width: 110px;
+                    aspect-ratio: 1/1;
+                    height: auto;
+                    position: absolute;
+                }
+            }
+        }
+
+        .prix {
+            font-family: $secondary-font-family;
+            grid-column-start: 3;
+            grid-column-end: 5;
+            gap: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            div {
+                min-width: 64px;
+                @include font-size(19);
+            }
+        }
+
+
+    }
+}
