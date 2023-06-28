@@ -16,16 +16,19 @@
             left: 53px;
         }
     }
-    .classique{
+
+    .classique {
         margin-top: 15vw;
         position: relative;
         height: fit-content;
 
         &::before {
-            @include sticker-block('locales.webp');
-            width: 300px;
-            top: -95%;
-            left: 53px;
+            @include sticker-block('classik.webp');
+            width: 150px;
+            aspect-ratio: 3/1;
+            top: -90px;
+            left: 70px;
+            rotate: 6deg;
         }
     }
 
