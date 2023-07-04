@@ -14,7 +14,7 @@
         position: relative;
 
         &::before {
-            @include sticker-block('cloud.webp');
+            @include sticker-block('/SVG/cloud.svg');
             top: 40%;
             right: -100px;
             width: 110px;
@@ -58,17 +58,17 @@
                     z-index: 2;
 
                     &::after {
-                        @include sticker-block('star.svg');
+                        @include sticker-block('/SVG/star.svg');
                         width: 30px;
                         left: -3px;
                         top: -20px;
-                        rotate: 10deg;
+                        rotate: -15deg;
                         z-index: -1;
                         animation: tic-scale 0.5s infinite ease-in-out alternate;
                     }
 
                     &::before {
-                        @include sticker-block('star.svg');
+                        @include sticker-block('/SVG/star.svg');
                         width: 20px;
                         left: 140px;
                         bottom: 29%;
@@ -84,21 +84,21 @@
                     position: relative;
 
                     &::after {
-                        @include sticker-block('coeur.svg');
+                        @include sticker-block('/SVG/heart.svg');
                         width: 17px;
                         left: 177px;
-                        top: -5px;
-                        rotate: 23deg;
+                        top: -10px;
+                        rotate: 15deg;
                         animation: beat-box 5s ease-in-out infinite;
 
                     }
 
                     &::before {
-                        @include sticker-block('coeur.svg');
+                        @include sticker-block('/SVG/heart.svg');
                         width: 10px;
-                        top: -9px;
+                        top: -15px;
                         left: 185px;
-                        rotate: 41deg;
+                        rotate: 25deg;
                         animation: beat-box 2s ease-in-out infinite;
                     }
                 }

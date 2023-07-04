@@ -32,7 +32,7 @@ h2,
     gap: 20px;
     padding: 5px 0;
     &::after,&::before{
-        @include sticker('star.svg');
+        @include sticker('/SVG/star.svg');
         width: 25px;
         position: relative;
         bottom: 50%;

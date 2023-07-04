@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500.916 100.439">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fac840;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="assets">
+    <g id="etiquette">
+      <path id="Tracé_68" data-name="Tracé 68" class="cls-1" d="m500.916,59.131c-4.313,23.912-25.125,41.307-49.422,41.309H49.821C22.091,100.224-.214,77.57.002,49.84.215,22.415,22.395.234,49.821.021h378.444l72.651,59.11Z"/>
+      <path id="Tracé_69" data-name="Tracé 69" class="cls-2" d="m492.32,61.55c2.926-.601,5.792-1.462,8.566-2.571L428.125,0l4.73,22.692c5.718,27.132,32.32,44.515,59.464,38.859"/>
+    </g>
+  </g>
+</svg>

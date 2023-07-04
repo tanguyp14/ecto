@@ -4,14 +4,14 @@
     position: relative;
 
     &::before {
-        @include sticker('glob.webp');
+        @include sticker('/SVG/globe.svg');
         width: 20vw;
         left: 0;
         bottom: 1vw;
     }
 
     &::after {
-        @include sticker('sunshine.webp');
+        @include sticker('/SVG/sunny.svg');
         width: 15vw;
         bottom: 0;
         left: 12vw;
@@ -27,7 +27,7 @@
 
         &::after {
             content: '';
-            background-image: url('./../img/logo.svg');
+            background-image: url('./../img/SVG/logo.svg');
             background-size: contain;
             background-repeat: no-repeat;
             display: flex;
