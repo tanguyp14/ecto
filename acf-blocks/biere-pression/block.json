@@ -5,9 +5,8 @@
     "title": "Biere Pression",
     "description": "Liste des bières pression",
     "icon": "beer",
-    "category": "pixelea",
+    "category": "hatsumei",
     "keywords": [
-        "ng1",
         "block"
     ],
     "acf": {

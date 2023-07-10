@@ -12,7 +12,7 @@
         &::before {
             @include sticker-block('/COMPOSITIONS/SVG/locales.svg');
             width: 300px;
-            top: -92%;
+            top: -43%;
             left: 23px;
         }
         .content{
@@ -20,7 +20,7 @@
                 @include sticker-block('/SVG/caen.svg');
                 aspect-ratio: 3/1;
                 width: 120px;
-                top: -75px;
+                top: -55px;
                 right: -52px;
                 z-index: 10;
                 rotate: -3deg;
@@ -37,7 +37,7 @@
             @include sticker-block('/SVG/classique.svg');
             width: 150px;
             aspect-ratio: 3/1;
-            top: -90px;
+            top: -20%;
             left: 70px;
             rotate: 6deg;
         }
@@ -45,7 +45,7 @@
             &::before {
                 @include sticker-block('/COMPOSITIONS/SVG/green-easy.svg');
                 width: 150px;
-                top: 0px;
+                top: 20%;
                 right: -120px;
                 rotate: 6deg;
             }
@@ -56,7 +56,7 @@
         display: grid;
         grid-template-columns: 360px;
         align-items: end;
-        justify-content: center;
+        justify-content: start;
         margin: auto;
 
         article {

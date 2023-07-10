@@ -1,0 +1,155 @@
+@import '../../../../src/scss/abstracts/all.scss';
+
+// Call all variables 
+.arranges {
+    margin-top: 15vw;
+    position: relative;
+
+    &::before {
+        @include sticker-block('/SVG/cicle-star.svg');
+        width: 400px;
+        aspect-ratio: 3/1;
+        top: -7%;
+        left: 90%;
+        transform: scaleX(-1);
+        rotate: -10deg;
+    }
+
+    .prix {
+        color: $white;
+        position: absolute;
+        top: -40px;
+        width: 100%;
+        transform-origin: center center;
+        display: flex;
+        justify-content: space-between;
+        font-family: $secondary-font-family;
+        p{
+            border-radius: 40px;
+            padding: 5px;
+            text-align: center;
+            width: 100px;
+            @include font-size(25);
+        }
+        &_left {
+            rotate: -8deg;
+            left: 0;
+            p {
+                background-color: $bleu-clair;
+
+                &.p {
+                    background-color: $white;
+                    color: $bleu-clair;
+                }
+            }
+        }
+
+        &_right {
+            rotate: 8deg;
+            right: 0;
+            p{
+                background-color: $rose;
+            }
+            .p {
+                background-color: $white;
+                color: $rose;
+            }
+        }
+    }
+
+    .rhum {
+        padding-top: 10vw;
+        margin-top: 15vw;
+        position: relative;
+
+        &::before {
+            @include sticker-block('/SVG/rhum.svg');
+            width: 170px;
+            aspect-ratio: 3/1;
+            top: -40px;
+            left: 50%;
+        }
+        .content{
+            &::before{
+                @include sticker-block('/COMPOSITIONS/SVG/slice-star.svg');
+                width: 120px;
+                top: 34%;
+                left: 93%;
+            }
+        }
+    }
+
+    .calva {
+        margin-top: 20vw;
+        position: relative;
+        padding-top: 10vw;
+        padding-bottom: 150px;
+        &::before {
+            @include sticker-block('/COMPOSITIONS/SVG/calva-star.svg');
+            width: 250px;
+            aspect-ratio: 3/1;
+            top: -50px;
+            left: 50%;
+        }
+        &::after {
+            @include sticker-block('/COMPOSITIONS/SVG/square-globe.svg');
+            width: 400px;
+            aspect-ratio: 3/1;
+            bottom: 0px;
+            left: 50%;
+        }
+    }
+
+    .content {
+        margin-top: 20px;
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style: none;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                padding-left: 50px;
+                @include font-size(23);
+                color: $bleu;
+                margin-bottom: 10px;
+
+                &::before {
+                    @include sticker-block('/SVG/star-blue.svg');
+                    width: 15px;
+                    animation: tic-scale 5s infinite ease-in-out alternate;
+                    left: 28px;
+                }
+            }
+        }
+        .ti-punch{
+            margin-top: 20px;
+            .attributes{
+                margin: auto;
+                width: 300px;
+                max-width: 100%;
+                border-radius: 60px;
+                padding: 0px 10px;
+                border: 2px solid $rose;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-content: center;
+                gap: 3px;
+                span{
+                    font-family: $secondary-font-family;
+                }
+                .type{
+                    background-color: $bleu-clair;
+                    color: white;
+                    border-color: $bleu-clair;
+                    padding: 2% 5%;
+                    border-radius: 30px;
+                    @include font-size(15);
+                }
+            }
+        }
+    }
+}
