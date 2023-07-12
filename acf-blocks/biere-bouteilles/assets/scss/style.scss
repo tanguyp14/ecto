@@ -67,11 +67,6 @@
                 grid-column-end: 5;
             }
 
-            span {
-                @include rounded($white, $bleu-clair);
-
-            }
-
             $transforms: 5deg, -8deg, 12deg, -3deg;
             $leftValues: 30px, 40px, 20px, 10px;
 

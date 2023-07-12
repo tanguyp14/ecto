@@ -1,0 +1,118 @@
+@import '../../../../src/scss/abstracts/all.scss';
+
+// Call all variables 
+.cocktails {
+    margin-top: 15vw;
+    position: relative;
+
+    article {
+        margin-bottom: 80px;
+    }
+
+    .prix {
+        font-family: $secondary-font-family;
+        @include font-size(30);
+        width: 140px;
+        height: 40px;
+        justify-self: flex-end;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .content {
+        p {
+            font-family: $secondary-font-family;
+            @include font-size(10);
+            color: $rose;
+            max-width: 90%;
+        }
+
+        .item {
+            margin-bottom: 17px;
+        }
+    }
+
+    .exclus {
+        position: relative;
+        .prix {
+            @include rounded($bleu-clair, $white);
+        }
+        &::before {
+            @include sticker-block('/COMPOSITIONS/SVG/hexa-sunny.svg');
+            width: 200px;
+            right: 10%;
+            top: 80%;
+            translate: 50% -50%;
+        }
+
+        .roll-container-exclu {
+            display: grid;
+            align-items: flex-start;
+            justify-content: center;
+            justify-items: center;
+            scale: 1;
+            position: absolute;
+            top: 2px;
+            left: -10%;
+            
+
+            .roll {
+                grid-column: 1;
+                grid-row: 1;
+                display: flex;
+                align-items: center;
+                right: 0;
+                overflow: hidden;
+                font-family: $secondary-font-family;
+                width: 255px;
+                height: 40px;
+                font-size: 20pt;
+                color: $bleu;
+                    border-radius: 100px;
+
+                span {
+                    white-space: nowrap;
+                    animation: defilement-rtl 5s infinite linear;
+                    z-index: 2;
+                }
+
+                &.back {
+                    background-image: none;
+                    background-color: $white;
+                    border: $bleu-clair 2px solid;
+                    width: 260px;
+                    height: 40px;
+                    top: -2px;
+                    position: relative;
+                    border-radius: 100px;
+                }
+            }
+        }
+    }
+
+    .classiques {
+        position: relative;
+
+        .prix {
+            @include rounded($jaune, $white);
+
+            &::before {
+                @include sticker-block('/SVG/classique.svg');
+                aspect-ratio: 3/1;
+                width: 200px;
+                left: -8px;
+                translate: 0% 0%;
+            }
+        }
+
+        .content {
+            .attributes {
+                margin-top: 2px;
+                max-width: 300px;
+                min-height: unset;
+            }
+        }
+    }
+}

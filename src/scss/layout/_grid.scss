@@ -30,6 +30,9 @@ article {
             justify-content: center;
             width: fit-content;
             border: 1px solid;
+            padding: 2% 5%;
+            border-radius: 30px;
+            font-family: $secondary-font-family;
 
             &.magic {
                 background: linear-gradient(45deg, $rose 0%, $jaune 50%, $bleu-clair 100%);

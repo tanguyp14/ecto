@@ -39,7 +39,7 @@
 		</header><!-- #masthead -->
 		<div class="roll-container">
 		<div class="roll back"></div>
-		<div class="roll"><span> - bières - cocktails - saucissons</span><span> - bières - cocktails - saucissons</span></div>
+		<div class="roll"><span>bières&thinsp;-&thinsp;cocktails&thinsp;-&thinsp;saucissons&thinsp;-&thinsp;</span><span>bières&thinsp;-&thinsp;cocktails&thinsp;-&thinsp;saucissons&thinsp;-&thinsp;</span></div>
 		</div>
 		
 		<main id="main-content" role="main">
