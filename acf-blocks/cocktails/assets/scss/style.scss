@@ -18,7 +18,7 @@
         justify-content: center;
         display: flex;
         align-items: center;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     .content {
@@ -66,7 +66,7 @@
                 right: 0;
                 overflow: hidden;
                 font-family: $secondary-font-family;
-                width: 255px;
+                width: 205px;
                 height: 40px;
                 font-size: 20pt;
                 color: $bleu;
@@ -82,7 +82,7 @@
                     background-image: none;
                     background-color: $white;
                     border: $bleu-clair 2px solid;
-                    width: 260px;
+                    width: 210px;
                     height: 40px;
                     top: -2px;
                     position: relative;
@@ -105,6 +105,13 @@
                 left: -8px;
                 translate: 0% 0%;
             }
+        }
+        &::before {
+            @include sticker-block('/COMPOSITIONS/SVG/square-ecto-caen.svg');
+            width: 200px;
+            right: 10%;
+            top: 55%;
+            translate: 50% -50%;
         }
 
         .content {

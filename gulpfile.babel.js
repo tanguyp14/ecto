@@ -50,7 +50,8 @@ function styles() {
     .pipe(plumber())
     .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([ autoprefixer("last 2 version"), cssnano({ zindex: false, reduceIdents: false }) ]))
+    .pipe(postcss([ autoprefixer("last 2 version"), cssnano({ zindex: false, discardUnused: false,
+      reduceIdents: false }) ]))
     .pipe(gulpif(!PRODUCTION, sourcemaps.write('./')))
     .pipe(gulpif(PRODUCTION, rename("main.min.css")))
     .pipe(dest(paths.styles.dest))
@@ -61,7 +62,8 @@ function blockStyles() {
   return src(paths.blockStyles.src)
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([ autoprefixer("last 2 version"), cssnano({ zindex: false }) ]))
+    .pipe(postcss([ autoprefixer("last 2 version"), cssnano({ zindex: false, discardUnused: false,
+      reduceIdents: false}) ]))
     .pipe(rename(function (file) {
       file.dirname = file.dirname.replace('scss', 'css');
     }))

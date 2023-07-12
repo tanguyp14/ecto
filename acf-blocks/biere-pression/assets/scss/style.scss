@@ -53,6 +53,7 @@
             }
 
             &.biere_du_moment {
+                
                 .nom {
                     position: relative;
                     z-index: 2;
@@ -64,7 +65,7 @@
                         top: -10px;
                         rotate: -15deg;
                         z-index: -1;
-                        animation: tic-scale 0.5s infinite ease-in-out alternate;
+                        animation: tic-scale 0.5s infinite ease-in-out alternate-reverse;
                     }
 
                     &::before {
@@ -73,8 +74,7 @@
                         left: 140px;
                         bottom: -10%;
                         rotate: -10deg;
-                        z-index: 1;
-                        animation: tic-scale 1.5s infinite ease-in-out alternate;
+                        animation: tic-scale 1.5s infinite ease-in-out alternate-reverse;
                     }
                 }
             }
@@ -89,7 +89,7 @@
                         left: 177px;
                         top: 0px;
                         rotate: 15deg;
-                        animation: beat-box 5s ease-in-out infinite;
+                        animation: beat-box 5s ease-in-out infinite alternate;
 
                     }
 
@@ -99,7 +99,7 @@
                         top: -9px;
                         left: 185px;
                         rotate: 25deg;
-                        animation: beat-box 2s ease-in-out infinite;
+                        animation: beat-box 2s ease-in-out infinite alternate;
                     }
                 }
 
