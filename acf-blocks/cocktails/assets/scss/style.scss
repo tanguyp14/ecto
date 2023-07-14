@@ -36,9 +36,11 @@
 
     .exclus {
         position: relative;
+
         .prix {
             @include rounded($bleu-clair, $white);
         }
+
         &::before {
             @include sticker-block('/COMPOSITIONS/SVG/hexa-sunny.svg');
             width: 200px;
@@ -56,7 +58,7 @@
             position: absolute;
             top: 2px;
             left: -10%;
-            
+
 
             .roll {
                 grid-column: 1;
@@ -70,7 +72,7 @@
                 height: 40px;
                 font-size: 20pt;
                 color: $bleu;
-                    border-radius: 100px;
+                border-radius: 100px;
 
                 span {
                     white-space: nowrap;
@@ -106,6 +108,7 @@
                 translate: 0% 0%;
             }
         }
+
         &::before {
             @include sticker-block('/COMPOSITIONS/SVG/square-ecto-caen.svg');
             width: 180px;
