@@ -1,0 +1,124 @@
+@import '../../../../src/scss/abstracts/all.scss';
+
+// Call all variables 
+.chaud {
+    margin: 30vw 0 15vw;
+    position: relative;
+
+    .supp {
+        @include rounded($bleu-clair, $white);
+        @include font-size(20);
+        height: 35px;
+        max-width: 320px;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-bottom: 30px;
+
+        &::after {
+            @include sticker-block('/SVG/star.svg');
+            width: 20px;
+            top: -10px;
+            left: -10px;
+            rotate: -5deg;
+            animation: tic-scale 2s alternate infinite ease-in-out;
+        }
+
+        &::before {
+            @include sticker-block('/SVG/star-pink.svg');
+            width: 30px;
+            top: 15px;
+            left: 0;
+            rotate: 5deg;
+            animation: tic-scale 1s alternate-reverse infinite ease-in-out;
+
+        }
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: $grid;
+
+        article {
+            grid-template-columns: $grid;
+            grid-template-rows: auto;
+            position: relative;
+            margin-bottom: 10px;
+            grid-column-end: 8;
+
+
+            h3 {
+                @include font-size(30);
+                grid-column-end: 8;
+
+            }
+
+            .attributes {
+                max-width: unset;
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            .prix {
+                font-family: $secondary-font-family;
+                @include font-size(20);
+                grid-column: 7;
+                text-align: center;
+            }
+
+            &.alcool_soft {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 1px solid $rose;
+                border-radius: 50px;
+                width: 80%;
+                margin: auto;
+
+                &::after {
+                    @include sticker-block('/COMPOSITIONS/SVG/caen-sunny.svg');
+                    width: 120px;
+                    bottom: -26px;
+                    left: -65px;
+                    translate: 0;
+
+                }
+
+                &::before {
+                    @include sticker-block('/COMPOSITIONS/SVG/double-star.svg');
+                    width: 60px;
+                    translate: 0;
+                    top: -13px;
+                    right: -34px;
+                    animation: tic-scale 2s infinite alternate ease-in-out;
+                }
+
+                .attributes {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    max-width: 300px;
+                    width: 300px;
+                    margin: 10px 0;
+                }
+
+                span {
+                    font-family: $secondary-font-family;
+                    @include rounded($white, $bleu-clair);
+                    @include font-size(12);
+                    height: 20px;
+
+                    &.qtt {
+                        @include font-size(12);
+                        margin: 5px 0;
+                        height: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
