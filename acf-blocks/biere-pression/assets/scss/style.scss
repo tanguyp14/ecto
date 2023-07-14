@@ -6,7 +6,7 @@
 
     .content {
         display: grid;
-        grid-template-columns: 128px 30px 64px 5px 64px 5px 64px;
+        grid-template-columns: $grid;
         grid-template-rows: 20px auto;
         align-items: end;
         justify-content: start;
@@ -46,14 +46,14 @@
 
         article {
             grid-column-end: 8;
-            grid-template-columns: 128px 30px 64px 5px 64px 5px 64px;
+            grid-template-columns: $grid;
 
             .nom {
                 grid-column-end: 8;
             }
 
             &.biere_du_moment {
-                
+
                 .nom {
                     position: relative;
                     z-index: 2;
@@ -107,19 +107,26 @@
         }
 
         .prix {
-            grid-column-start: 3;
-            grid-column-end: 8;
             font-family: $secondary-font-family;
-            gap: 5px;
+            min-width: 64px;
+            @include font-size(19);
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
 
-            div {
-                min-width: 64px;
-                @include font-size(19);
+            &.demi {
+                grid-column-start: 3;
+            }
+
+            &.pinte {
+                grid-column-start: 5;
+            }
+
+            &.litre {
+                grid-column-start: 7;
             }
         }
     }
+
 }

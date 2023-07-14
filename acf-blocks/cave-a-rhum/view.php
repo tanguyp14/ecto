@@ -1,15 +1,13 @@
-<section class="biere-pression">
     <?php
     $fields = get_fields();
     extract($fields);
     ?>
+<section class="cave <?php echo format_value($titre); ?>">
     <h2><?php echo $titre; ?></h2>
     <div class="content">
-        <span>25cl</span>
-        <span>50cl</span>
-        <span>1L</span>
-        <?php foreach ($liste_des_bieres as $biere) :  extract($biere) ?>
-            <article class="<?php echo format_value($nom); ?> <?php echo format_value($type_special); ?>">
+        <span>5cl</span>
+        <?php foreach ($liste as $l) :  extract($l) ?>
+            <article class="<?php echo format_value($nom); ?>">
                 <h3 class="nom"><?php echo $nom; ?></h3>
                 <?php if ($sous_titre) : ?>
                     <div class="attributes">
@@ -23,15 +21,8 @@
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
-
-                <div class="prix demi">
-                    <?php echo $prix_25cl ?>€
-                </div>
-                <div class="prix pinte">
-                    <?php echo $prix_50cl ?>€
-                </div>
-                <div class="prix litre">
-                    <?php echo $prix_1l ?>€
+                <div class="prix">
+                    <?php echo $prix ?>€
                 </div>
             </article>
         <?php endforeach; ?>

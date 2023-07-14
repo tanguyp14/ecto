@@ -1,0 +1,55 @@
+@import '../../../../src/scss/abstracts/all.scss';
+
+// Call all variables 
+.cave {
+    margin-top: 15vw;
+    position: relative;
+
+    &.cave_à_whisky {
+        margin-bottom: 20vw;
+        &::after {
+            @include sticker-block('/COMPOSITIONS/SVG/globe-star-ecto.svg');
+            width: 200px;
+            left: 50%;
+            bottom: -30px;
+            translate: -50% 50%;
+        }
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: $grid;
+
+        span {
+            @include rounded($white, $bleu-clair);
+            @include font-size(14);
+            width: 100%;
+            line-height: 15pt;
+            height: fit-content;
+            text-align: center;
+            grid-column: 7;
+        }
+
+        article {
+            grid-template-columns: $grid;
+            grid-template-rows: auto;
+            position: relative;
+            margin-bottom: 10px;
+            grid-column-end: 8;
+
+
+            h3 {
+                @include font-size(30);
+                grid-column-end: 8;
+
+            }
+
+            .prix {
+                font-family: $secondary-font-family;
+                @include font-size(20);
+                grid-column: 7;
+                text-align: center;
+            }
+        }
+    }
+}

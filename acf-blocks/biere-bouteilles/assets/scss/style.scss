@@ -54,17 +54,18 @@
 
     .content {
         display: grid;
-        grid-template-columns: 360px;
+        grid-template-columns: $grid;
         align-items: end;
         justify-content: start;
         margin: auto;
 
         article {
-            grid-column-end: 5;
-            grid-template-columns: 128px 30px 64px 5px 133px;
+            grid-column-end: 8;
+            grid-template-columns: $grid;
 
             .nom {
-                grid-column-end: 5;
+                grid-column-end: 8;
+                grid-row: 1;
             }
 
             $transforms: 5deg, -8deg, 12deg, -3deg;
@@ -86,7 +87,7 @@
             }
 
             .image {
-                grid-column-start: 5;
+                grid-column-start: 4;
                 grid-column-end: 6;
                 grid-row-start: 1;
                 grid-row-end: 3;
@@ -108,6 +109,7 @@
             font-family: $secondary-font-family;
             grid-column-start: 3;
             grid-column-end: 5;
+            grid-row: 2;
             gap: 5px;
             display: flex;
             align-items: center;
