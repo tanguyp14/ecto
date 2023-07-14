@@ -1,0 +1,115 @@
+@import '../../../../src/scss/abstracts/all.scss';
+
+// Call all variables 
+.vins {
+    margin-top: 15vw;
+    position: relative;
+
+    .content {
+        display: grid;
+        grid-template-columns: 128px 30px 64px 5px 64px 5px;
+
+        >div {
+            display: grid;
+            grid-template-columns: 128px 30px 64px 5px 64px 5px 64px;
+            grid-template-rows: auto;
+            grid-column-start: 1;
+            grid-column-end: 8;
+            margin-top: 60px;
+
+            >span {
+                font-family: $secondary-font-family;
+                @include font-size(12);
+                @include rounded($white, $bleu-clair);
+                grid-column-start: 7;
+                grid-column-end: 8;
+                height: 20px;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                display: flex;
+                margin: 20px 0;
+
+                &:nth-child(1) {
+                    @include rounded($white, $rose);
+                    grid-column-start: 5;
+                    grid-column-end: 6;
+                }
+            }
+
+            &.rouges {
+                position: relative;
+                &::before {
+                    @include sticker-block('/SVG/rouges.svg');
+                    aspect-ratio: auto;
+                    width: 220px;
+                    height: 50px;
+                    translate: 0%;
+                    top: -50px;
+                }
+            }
+            &.blancs {
+                position: relative;
+                &::before {
+                    @include sticker-block('/SVG/blancs.svg');
+                    aspect-ratio: unset;
+                    width: 200px;
+                    height: 40px;
+                    translate: 0%;
+                    top: -50px;
+                }
+            }
+            &.roses {
+                position: relative;
+                &::before {
+                    @include sticker-block('/SVG/roses.svg');
+                    aspect-ratio: unset;
+                    width: 175px;
+                    height: 40px;
+                    translate: 0%;
+                    top: -50px;
+                }
+            }
+            &.champagnes {
+                position: relative;
+                &::before {
+                    @include sticker-block('/SVG/champagnes.svg');
+                    aspect-ratio: unset;
+                    width: 355px;
+                    height: 50px;
+                    translate: 0%;
+                    top: -50px;
+                }
+            }
+        }
+
+        article {
+            grid-column-end: 8;
+            grid-template-columns: 128px 30px 64px 5px 64px 5px 64px;
+
+            .nom {
+                grid-column-end: 8;
+                margin-bottom: 4px;
+            }
+
+            .attributes {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                max-width: none;
+            }
+            .prix{
+                text-align: center;
+                @include font-size(19);
+                font-family: $secondary-font-family;
+                &.verre{
+                    grid-column-start: 5;
+                    grid-column-end: 6;
+                }
+                &.bout{
+                    grid-column-start: 7;
+                    grid-column-end: 8;
+                }
+            }
+        }
+    }
+}

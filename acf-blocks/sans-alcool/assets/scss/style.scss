@@ -1,0 +1,80 @@
+@import '../../../../src/scss/abstracts/all.scss';
+
+// Call all variables 
+.sans-alcool {
+    margin-top: 15vw;
+    position: relative;
+
+    article {
+        margin-bottom: 160px;
+        position: relative;
+
+        .prix {
+            @include rounded($bleu-clair, $white);
+            font-family: $secondary-font-family;
+            @include font-size(30);
+            width: 140px;
+            height: 40px;
+            justify-self: center;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            position: relative;
+
+            &::after,
+            &::before {
+                @include sticker-block('/SVG/star.svg');
+                animation: tic-scale 2s alternate infinite ease-in-out;
+            }
+
+            &::after {
+                width: 40px;
+                top: -19px;
+                left: -20px;
+                translate: 0;
+                rotate: -5deg;
+            }
+
+            &::before {
+                width: 30px;
+                bottom: -10px;
+                right: -15px;
+                translate: 0;
+                rotate: 5deg;
+            }
+        }
+
+        &::before {
+            @include sticker-block('/SVG/easy.svg');
+            translate: 0;
+            aspect-ratio: 2/1;
+            width: 200px;
+            left: -30px;
+            bottom: -100px;
+            rotate: 7deg;
+        }
+        &::after {
+            @include sticker-block('/COMPOSITIONS/SVG/glob-star.svg');
+            translate: 0;
+            aspect-ratio: 2/1;
+            width: 130px;
+            right: -50px;
+            top: 105px;
+            rotate: 7deg;
+            z-index: -1;
+        }
+
+        .content {
+            p {
+                font-family: $secondary-font-family;
+                @include font-size(10);
+                color: $bleu-clair;
+            }
+
+            .item {
+                margin-bottom: 17px;
+            }
+        }
+    }
+}
