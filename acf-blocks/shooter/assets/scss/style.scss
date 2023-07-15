@@ -2,9 +2,8 @@
 
 // Call all variables 
 .shooter {
-    margin-top: 15vw;
+   margin-top: 70px;
     position: relative;
-    margin-bottom: 20vw;
     &::after {
         @include sticker-block('/COMPOSITIONS/SVG/cloud-hexa-star.svg');
         width: 200px;

@@ -1,0 +1,22 @@
+@import '../../../../src/scss/abstracts/all.scss';
+
+// Call all variables 
+.contact {
+   margin-top: 50px;
+    position: relative;
+    font-family: $secondary-font-family;
+    color: $rose;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    h4{
+        text-transform: uppercase;
+        font-weight: 400;
+        @include font-size(20);
+        margin: 0;
+    }
+    .blue{
+        color: $bleu-clair;
+        @include font-size(18);
+    }
+}

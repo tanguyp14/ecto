@@ -1,0 +1,30 @@
+@import '../../../../src/scss/abstracts/all.scss';
+
+// Call all variables 
+.follow-us {
+    margin-top: 20px;
+    position: relative;
+    a{
+        max-width: 300px;
+        height: 100px;
+        display: flex;
+        position: relative;
+        margin: auto;
+        &::after{
+            @include sticker-block('/COMPOSITIONS/SVG/follow.svg');
+            width: 300px;
+            aspect-ratio: 2/1;
+            left: 50%;
+            top: -20%;
+        }
+        &::before{
+            @include sticker-block('/SVG/heart.svg');
+            width: 20px;
+            rotate: 18deg;
+            left: 88px;
+            top: 25px;
+            z-index: 3;
+            animation: beat-box 3s alternate infinite ease-in-out;
+        }
+    }
+}

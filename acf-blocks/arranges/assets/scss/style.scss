@@ -2,7 +2,7 @@
 
 // Call all variables 
 .arranges {
-    margin-top: 15vw;
+   margin-top: 50px;
     position: relative;
 
     &::before {
@@ -58,8 +58,8 @@
     }
 
     .rhum {
-        padding-top: 10vw;
-        margin-top: 15vw;
+        padding-top: 30px;
+        margin-top: 50px;
         position: relative;
 
         &::before {
@@ -80,9 +80,9 @@
     }
 
     .calva {
-        margin-top: 20vw;
+        margin-top: 70px;
         position: relative;
-        padding-top: 10vw;
+        padding-top: 30px;
         padding-bottom: 150px;
         &::before {
             @include sticker-block('/COMPOSITIONS/SVG/calva-star.svg');

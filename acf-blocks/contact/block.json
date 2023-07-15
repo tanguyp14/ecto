@@ -1,0 +1,23 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "acf/contact",
+    "title": "Contact Infos",
+    "description": "contact",
+    "icon": "beer",
+    "category": "hatsumei",
+    "keywords": [
+        "block"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "view.php"
+    },
+    "script": ["contact"],
+    "style": "file:assets/css/style.css",
+    "supports": {
+        "align": true,
+        "html": false,
+        "multiple": false
+    }
+}
