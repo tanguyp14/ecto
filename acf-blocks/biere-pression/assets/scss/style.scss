@@ -49,7 +49,9 @@
             grid-template-columns: $grid;
 
             .nom {
-                grid-column-end: 8;
+                width: fit-content;
+                white-space: nowrap;
+                grid-row: 1;
             }
 
             &.biere_du_moment {
@@ -71,7 +73,7 @@
                     &::before {
                         @include sticker-block('/SVG/star.svg');
                         width: 20px;
-                        left: 140px;
+                        right: -25px;
                         bottom: -10%;
                         rotate: -10deg;
                         animation: tic-scale 1.5s infinite ease-in-out alternate-reverse;
@@ -114,6 +116,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            grid-row: 2;
 
             &.demi {
                 grid-column-start: 3;

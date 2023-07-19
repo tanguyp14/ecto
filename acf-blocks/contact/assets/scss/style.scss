@@ -9,6 +9,10 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    background-color: $white;
+    border-radius: 100px;
+    rotate: -5deg;
+    padding: 5px;
     h4{
         text-transform: uppercase;
         font-weight: 400;
