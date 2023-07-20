@@ -1,6 +1,6 @@
 #page {
     background-color: $beige;
-    padding: 10px 8px 0 8px;
+    padding: 0px 8px 0 8px;
     position: relative;
     overflow: hidden;
 
@@ -13,7 +13,7 @@
         scale: 1.2;
         position: absolute;
         right: 4vw;
-        top: 28vw;
+        bottom: -70px;
 
         .roll {
             grid-column: 1;

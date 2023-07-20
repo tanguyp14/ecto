@@ -35,11 +35,13 @@
 		<a class="skip-link screen-reader-text sr-only" href="#main-content"><?php esc_html_e('Aller au contenu', 'ectobar'); ?></a>
 
 		<header id="masthead" class="header" role="banner">
+		<?php get_template_part('template-parts/navigation/primary'); ?>
+
 			<h1>ECTO</h1>
+			<div class="roll-container">
+			<div class="roll back"></div>
+			<div class="roll"><span>bières&thinsp;-&thinsp;cocktails&thinsp;-&thinsp;saucissons&thinsp;-&thinsp;</span><span>bières&thinsp;-&thinsp;cocktails&thinsp;-&thinsp;saucissons&thinsp;-&thinsp;</span></div>
+			</div>
 		</header><!-- #masthead -->
-		<div class="roll-container">
-		<div class="roll back"></div>
-		<div class="roll"><span>bières&thinsp;-&thinsp;cocktails&thinsp;-&thinsp;saucissons&thinsp;-&thinsp;</span><span>bières&thinsp;-&thinsp;cocktails&thinsp;-&thinsp;saucissons&thinsp;-&thinsp;</span></div>
-		</div>
 		
 		<main id="main-content" role="main">
