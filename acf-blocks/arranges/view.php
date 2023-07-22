@@ -1,8 +1,8 @@
-<section class="arranges">
     <?php
     $fields = get_fields();
     extract($fields);
     ?>
+<section id="<?php echo format_value($titre); ?>" class="arranges" id="arranges">
     <h2><?php echo $titre; ?></h2>
     <div class="rhum">
         <?php extract($rhum); ?>

@@ -2,7 +2,6 @@
 
 // Call all variables 
 .soft {
-   margin-top: 50px;
     position: relative;
     &::after{
         @include sticker-block('/COMPOSITIONS/SVG/cloud-globe.svg');

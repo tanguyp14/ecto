@@ -1,4 +1,8 @@
 section{
     max-width: 600px;
     margin: auto;
+    padding-top: 45px;
+    &.follow-us,&.biere-pression{
+        padding-top: 0px;
+    }
 }

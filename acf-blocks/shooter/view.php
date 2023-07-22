@@ -1,8 +1,8 @@
-    <section class="shooter">
     <?php
     $fields = get_fields();
     extract($fields);
     ?>
+    <section id="<?php echo format_value($titre); ?>" class="shooter">
         <h2><?php echo $titre; ?></h2>
         <div class="content">
             <span>5cl</span>

@@ -1,8 +1,8 @@
-<section class="vins">
     <?php
     $fields = get_fields();
     extract($fields);
     ?>
+<section id="<?php echo format_value($titre); ?>" class="vins">
     <h2><?php echo $titre; ?></h2>
     <div class="content">
         <?php foreach ($types_de_vins as $i) : extract($i) ?>

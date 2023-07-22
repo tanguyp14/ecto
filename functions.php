@@ -77,9 +77,17 @@ add_filter('login_headerurl', 'ectobar_new_wp_login_url');
 
 function format_value($value)
 {
-	$formatted_value = strtolower(str_replace(' ', '_', $value));
-	return $formatted_value;
+    // Remplace les caractères accentués par les lettres non accentuées
+    $value = Normalizer::normalize($value, Normalizer::FORM_D);
+    $value = preg_replace('/\p{M}/u', '', $value);
+
+    // Remplace les espaces par des traits de soulignement
+    $formatted_value = strtolower(str_replace(' ', '_', $value));
+
+    return $formatted_value;
 }
+
+
 
 function reformat_value($value)
 {

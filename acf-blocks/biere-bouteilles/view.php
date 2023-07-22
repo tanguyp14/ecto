@@ -1,8 +1,8 @@
-<section class="biere-bouteille">
     <?php
     $fields = get_fields();
     extract($fields);
     ?>
+<section id="<?php echo format_value($titre); ?>" class="biere-bouteille" > 
     <h2><?php echo $titre; ?></h2>
     <div class="locales">
         <div class="content">

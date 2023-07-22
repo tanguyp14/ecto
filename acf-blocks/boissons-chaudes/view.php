@@ -2,7 +2,7 @@
     $fields = get_fields();
     extract($fields);
     ?>
-<section class="chaud">
+<section id="<?php echo format_value($titre); ?>" class="chaud" >
     <h2><?php echo $titre; ?></h2>
     <div class="supp"><?php echo $supp; ?></div>
     <div class="content">

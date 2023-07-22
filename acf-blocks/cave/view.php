@@ -2,7 +2,7 @@
     $fields = get_fields();
     extract($fields);
     ?>
-<section class="cave <?php echo format_value($titre); ?>">
+<section id="<?php echo format_value($titre); ?>" class="cave <?php echo format_value($titre); ?>" >
     <h2><?php echo $titre; ?></h2>
     <div class="content">
         <span>5cl</span>

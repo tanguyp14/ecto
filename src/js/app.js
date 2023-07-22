@@ -5,6 +5,10 @@
 		$('.menu-toggle').on('click', function () {
 			$('header').toggleClass('header--menu-is-open');
 		});
+
+		$('nav li').on('click', function () {
+			$('header').toggleClass('header--menu-is-open');
+		});
 	});
 
 	$(window).scroll(function () {

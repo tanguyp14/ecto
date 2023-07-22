@@ -2,7 +2,7 @@
     $fields = get_fields();
     extract($fields);
     ?>
-<section class="aperitifs">
+<section id="<?php echo format_value($titre); ?>" class="aperitifs">
     <h2><?php echo $titre; ?></h2>
     <div class="content">
         <?php foreach ($liste as $l) :  extract($l) ?>

@@ -1,8 +1,8 @@
-<section class="cocktails">
     <?php
     $fields = get_fields();
     extract($fields);
     ?>
+<section id="<?php echo format_value($titre); ?>" class="cocktails">
     <h2><?php echo $titre; ?></h2>
     <article class="exclus">
         <div class="roll-container-exclu">

@@ -1,8 +1,8 @@
-<section class="sans-alcool">
     <?php
     $fields = get_fields();
     extract($fields);
     ?>
+<section id="<?php echo format_value($titre); ?>" class="sans-alcool">
     <h2><?php echo $titre; ?></h2>
     <article>
         <div class="prix"><?php echo $prix_sans_alcool; ?>€</div>
