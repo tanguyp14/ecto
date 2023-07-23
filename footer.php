@@ -11,7 +11,7 @@
 			extract($hatsu); ?>
 			<?php $field = get_field_object('creation_developpement_site', 'option'); ?>
 			<?php echo $field['label']; ?> :
-			<a href="<?= $site_web ?>"> <?= $denomination ?></a>
+			<a alt="hatsumei" href="<?= $site_web ?>"> <?= $denomination ?></a> - <a alt="Mentions Légales" href="/mentions-legales">Mentions légales</a> 
 		</span>
 		<span> <?php $struct = get_field('structure', 'option');
 				extract($struct); ?>
@@ -20,7 +20,7 @@
 			extract($hatsu); ?>
 			<?php $field = get_field_object('creation_developpement_site', 'option'); ?>
 			<?php echo $field['label']; ?> :
-			<a href="<?= $site_web ?>"> <?= $denomination ?></a>
+			<a alt="hatsumei" href="<?= $site_web ?>"> <?= $denomination ?></a> - <a alt="Mentions Légales" href="/mentions-legales">Mentions légales</a> 
 		</span>
 	</div>
 </footer>
