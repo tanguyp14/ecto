@@ -5,7 +5,7 @@
     <section id="<?php echo format_value($titre); ?>" class="shooter">
         <h2><?php echo $titre; ?></h2>
         <div class="content">
-            <span>5cl</span>
+            <span>3cl</span>
             <?php foreach ($liste as $l) :  extract($l) ?>
                 <article class="<?php echo format_value($nom); ?>">
                     <h3 class="nom"><?php echo $nom; ?></h3>
