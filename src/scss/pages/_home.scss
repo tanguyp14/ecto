@@ -47,4 +47,13 @@
         }
     }
 
+    main {
+        @include breakpoints(md) {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 550px);
+            grid-gap: 20px;
+            justify-content: center;
+        }
+    }
+
 }

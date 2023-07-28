@@ -1,7 +1,7 @@
 (function ($) {
 
 	$('document').ready(function () {
-//		Burger nav
+		//		Burger nav
 		$('.menu-toggle').on('click', function () {
 			$('header').toggleClass('header--menu-is-open');
 		});

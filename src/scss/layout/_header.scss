@@ -4,12 +4,21 @@
     position: relative;
     margin-bottom: 15vh;
 
+    @include breakpoints(md) {
+        width: 50%;
+        margin: auto;
+        margin-bottom: 15vh;
+    }
 
     &::before {
         @include sticker('/SVG/globe.svg');
         width: 20vw;
         left: 0px;
         bottom: -60px;
+
+        @include breakpoints(md) {
+            width: 10vw;
+        }
     }
 
     &::after {
@@ -19,6 +28,11 @@
         left: 12vw;
         transform: scaleX(-1);
         animation: tic 5s infinite alternate ease-in-out;
+
+        @include breakpoints(md) {
+            width: 8vw;
+            left: 10%;
+        }
     }
 
     h1 {
@@ -27,6 +41,10 @@
         height: 27vw;
         margin: 0;
         padding-top: 50px;
+
+        @include breakpoints(md) {
+            height: 14vw;
+        }
 
         &::after {
             content: '';

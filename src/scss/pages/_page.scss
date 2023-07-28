@@ -1,8 +1,33 @@
-section{
+section {
     max-width: 600px;
     margin: auto;
     padding-top: 45px;
-    &.follow-us,&.biere-pression{
+
+    &.follow-us,
+    &.biere-pression {
         padding-top: 0px;
+        @include breakpoints(md) {
+            padding-top: 40px;
+        }
+    }
+
+    &.follow-us,
+    &.contact {
+        @include breakpoints(md) {
+            min-width: 400px;
+            grid-column: 1 / -1;
+        }
+    }
+
+    
+    @include breakpoints(md) {
+        padding-top: 40px;
+        margin-top: 0px !important;
+        width: 500px;
+    }
+    &.contact {
+        @include breakpoints(md) {
+            margin-top: 150px !important;
+        }
     }
 }
