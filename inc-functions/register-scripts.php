@@ -6,7 +6,6 @@
 // Enqueue Scripts
 add_action( 'wp_enqueue_scripts', 'ectobar_scripts' );
 function ectobar_scripts() {
-    wp_enqueue_script('slick-scripts', get_template_directory_uri() . '/dist/js/vendor/slick.min.js', array( 'jquery' ), false, false);
 	wp_enqueue_script('app-scripts', get_template_directory_uri() . '/dist/js/app.js', array( 'jquery' ), false, false);
 }
 

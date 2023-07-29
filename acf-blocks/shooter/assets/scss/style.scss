@@ -39,7 +39,7 @@
 
             }
             .sous-titre{
-                @include font-size(10);
+                @include font-size(12);
                 font-family: $secondary-font-family;
                 color: $bleu-clair;
                 grid-column-start: 1;

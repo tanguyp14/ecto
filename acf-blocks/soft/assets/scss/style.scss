@@ -36,7 +36,7 @@
             }
             .compo{
                 font-family: $secondary-font-family;
-                @include font-size(10);
+                @include font-size(12);
                 grid-column-start: 1;
                 grid-column-end: 7;
                 color: $rose;

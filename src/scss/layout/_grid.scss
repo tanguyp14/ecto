@@ -12,7 +12,6 @@ article {
     }
 
     .attributes {
-        max-width: 128px;
         display: flex;
         flex-wrap: wrap;
         min-height: 30px;
@@ -20,10 +19,12 @@ article {
         flex-direction: row;
         align-content: flex-start;
         grid-row: 2;
+        grid-column-end: 3;
+        grid-column-start: 1;
 
         .type {
-            @include font-size(10);
-            line-height: 7.5pt;
+            @include font-size(12);
+            line-height: 10.5pt;
             height: 15px;
             display: flex;
             align-items: center;

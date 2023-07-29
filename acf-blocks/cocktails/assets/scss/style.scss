@@ -19,7 +19,7 @@
     .content {
         p {
             font-family: $secondary-font-family;
-            @include font-size(10);
+            @include font-size(12);
             color: $rose;
             max-width: 90%;
         }
