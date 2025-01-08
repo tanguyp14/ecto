@@ -10,7 +10,7 @@
         "block"
     ],
     "acf": {
-        "mode": "preview",
+        "mode": "edit",
         "renderTemplate": "view.php"
     },
     "script": ["cocktails"],

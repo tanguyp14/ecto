@@ -1,5 +1,6 @@
 // Font Family
 @import url("https://use.typekit.net/dwz2htr.css");
+@import url('https://fonts.googleapis.com/css2?family=Erica+One&display=swap');
 @font-face {
     font-family: 'gulfs';
     src: url('../fonts/gulfsdisplay-normal-webfont.woff2') format('woff2'),
@@ -8,12 +9,18 @@
     font-style: normal;
     font-display: swap;
 }
-$primary-font-family: "gulfs", sans-serif;
+@font-face {
+    font-family: 'sf';
+    src: url('../fonts/sf.ttf') format('truetype');
+}
+
+
+$primary-font-family: "Erica One", serif;
 $secondary-font-family: "halogen", sans-serif;
 
 
 // Font Size
-$base-font-size: 16px;
+$base-font-size: 14px;
 
 // Line Height
 $base-line-height: 1.4;

@@ -2,6 +2,15 @@
 
 // Call all variables 
 .biere-bouteille {
+    h2 {
+        font-size: 21px;
+        margin-bottom: 0;
+    }
+    h3.under{
+        font-size: 20px;
+        text-align: center;
+        text-transform: uppercase;
+    }
 
     .locales {
         margin-top: 70px;
@@ -11,10 +20,11 @@
         &::before {
             @include sticker-block('/COMPOSITIONS/SVG/locales.svg');
             width: 300px;
-            top: -43%;
+            top: -150px;
             left: 23px;
         }
-        .content{
+
+        .content {
             &::before {
                 @include sticker-block('/SVG/caen.svg');
                 aspect-ratio: 3/1;
@@ -23,7 +33,13 @@
                 right: -52px;
                 z-index: 10;
                 rotate: -3deg;
-            } 
+            }
+            .type {
+                &.special{
+                    background-color: #ffffff;
+
+                }
+            }
         }
     }
 
@@ -40,7 +56,8 @@
             left: 70px;
             rotate: 6deg;
         }
-        .content{
+
+        .content {
             &::before {
                 @include sticker-block('/COMPOSITIONS/SVG/green-easy.svg');
                 width: 150px;
@@ -67,8 +84,8 @@
                 grid-row: 1;
             }
 
-            $transforms: 5deg, -8deg, 12deg, -3deg;
-            $leftValues: 30px, 40px, 20px, 10px;
+            $transforms: 5deg, -8deg, 12deg, -3deg, -3deg, -8deg;
+            $leftValues: 30px, 40px, 20px, 60px, 40px, 40px;
 
             @each $transform in $transforms {
                 $index: index($transforms, $transform);
