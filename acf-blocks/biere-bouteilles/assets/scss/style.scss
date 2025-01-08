@@ -6,7 +6,8 @@
         font-size: 21px;
         margin-bottom: 0;
     }
-    h3.under{
+
+    h3.under {
         font-size: 20px;
         text-align: center;
         text-transform: uppercase;
@@ -34,8 +35,9 @@
                 z-index: 10;
                 rotate: -3deg;
             }
+
             .type {
-                &.special{
+                &.special {
                     background-color: #ffffff;
 
                 }
@@ -86,12 +88,11 @@
 
             $transforms: 5deg, -8deg, 12deg, -3deg, -3deg, -8deg;
             $leftValues: 30px, 40px, 20px, 60px, 40px, 40px;
-
-            @each $transform in $transforms {
-                $index: index($transforms, $transform);
-                $left: nth($leftValues, $index);
-
-                &:nth-child(#{$index}) {
+            @for $i from 1 through length($transforms) {
+                $transform: nth($transforms, $i);
+                $left: nth($leftValues, $i);
+                
+                &:nth-child(#{$i}) {
                     .image {
                         img {
                             transform-origin: center;
